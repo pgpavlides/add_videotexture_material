@@ -26,10 +26,14 @@ export default class Camera {
         );
 
         this.perpectiveCamera.position.x = 0;
-        this.perpectiveCamera.position.y = 5;
-        this.perpectiveCamera.position.z = 9;
+        this.perpectiveCamera.position.y = 19;
+        this.perpectiveCamera.position.z = 30;
+
+       
         
     }
+
+   
 
   
 
@@ -72,9 +76,17 @@ export default class Camera {
     // }
 
     setOrbitControls(){
+
+        
+
         this.controls = new OrbitControls(this.perpectiveCamera, this.canvas); 
         this.controls.enableDamping = true;
+        // this.controls.dampingFactor = 1.5;
+        this.controls.rotateSpeed = 0.5;
         this.controls.enableZoom = true;
+        this.controls.enablePan = true;
+        this.controls.autoRotate = true;
+        this.controls.autoRotateSpeed = 0.2;
      }
      
     resizeCamera(){
@@ -82,6 +94,7 @@ export default class Camera {
         // Updating PerspectiveCamera on resize
         this.perpectiveCamera.aspect = this.sizes.aspect
         this.perpectiveCamera.updateProjectionMatrix();
+        
 
         // this.orthographicCamera.left = (-this.sizes.aspect * this.sizes.frustrum)/2
         // this.orthographicCamera.right = (this.sizes.aspect * this.sizes.frustrum)/2
@@ -94,6 +107,11 @@ export default class Camera {
 
     update(){
         this.controls.update();
+        // console.log(this.perpectiveCamera.position.x,this.perpectiveCamera.position.y,this.perpectiveCamera.position.z)
+        
+        // console.log("x  " + this.perpectiveCamera.position.x);
+        // console.log("y  " + this.perpectiveCamera.position.y);
+        // console.log("z  " + this.perpectiveCamera.position.z);
         
         // this.helper.matrixWorldNeedsUpdate = true;
         // this.helper.update();

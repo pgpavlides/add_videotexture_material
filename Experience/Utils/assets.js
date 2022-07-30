@@ -1,15 +1,15 @@
 export default [
-    {
-        name: "room",
-        type: "glbModel",
-        path: "/models/SPITI_VERGINA.glb"
-    },
+    // {
+    //     name: "room",
+    //     type: "glbModel",
+    //     path: "/models/SPITI_VERGINA.glb"
+    // },
 
-    {
-        name: "screen",
-        type: "videoTexture",
-        path: "/textures/flamingo.mp4"
-    },
+    // {
+    //     name: "screen",
+    //     type: "videoTexture",
+    //     path: "/textures/flamingo.mp4"
+    // },
 
     // {
     //     name: "room",
